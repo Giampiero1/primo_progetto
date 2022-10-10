@@ -1,20 +1,17 @@
 from django.urls import path  
-from .views import WELCOME
-from .views import HOMEPAGE
-from .views import LISTA
-from .views import CHI_SIAMO
+from .views import welcome
+from .views import homepage
+from .views import lista
+from .views import chi_siamo
+from .views import variabili
+from .views import index
 app_name = "prima app"
 urlpatterns = [
-    path('', HOMEPAGE, name = 'HOMEPAGE')
+    path('', homepage, name = 'homepage'),
+    path('', welcome, name = 'welcome'),
+    path('', lista, name = 'lista'),
+    path('', chi_siamo, name = 'chi_siamo'),
+    path('', variabili, name = 'variabili'),
+    path('', index, name = 'index'),
 ]
 
-urlpatterns = [
-    path('', WELCOME, name = 'WELCOME')
-]
-
-urlpatterns = [
-    path('', LISTA, name = 'LISTA')
-]
-urlpatterns = [
-    path('', CHI_SIAMO, name = 'CHI_SIAMO')
-]

@@ -1,23 +1,35 @@
 from django.shortcuts import render
 
 # Create your views here.
-def HOMEPAGE(request):
-    return render(request, "HOMEPAGE.html")
+def homepage(request):
+    return render(request, "homepage.html")
 
 from django.shortcuts import render
 
 # Create your views here.
-def WELCOME(request):
-     return render(request, "WELCOME.html")
+def welcome(request):
+     return render(request, "welcome.html")
 
 from django.shortcuts import render
 
 # Create your views here.
-def LISTA(request):
-     return render(request, "LISTA.html")
+def lista(request):
+     return render(request, "lista.html")
 
 from django.shortcuts import render
 
 # Create your views here.
-def CHI_SIAMO(request):
-     return render(request, "CHI_SIAMO.html")
+def chi_siamo(request):
+     return render(request, "chi_siamo.html")
+     
+# Create your views here.
+def variabili(request):
+     context= {
+          'var1': "Prima variabile",
+          'var2': "Seconda variabile",
+          'var3': "Terza variabile",
+     }
+     return render(request, "variabili.html",context)
+     # Create your views here.
+def index(request):
+     return render(request, "index.html")
