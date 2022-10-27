@@ -14,12 +14,49 @@
 
   </head>
   <body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-primary"></nav>
-    <div class="container my-4">
-        {% block content %} 
-        {% endblock content %}
-        {% block script %}
-        {% endblock script %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+           Prima App
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{%url 'prima_app:chi_siamo'%}">chi siamo</a>
+            <a class="dropdown-item" href="{%url 'prima_app:homepage'%}">homepage</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{%url 'prima_app:variabili'%}">variabili</a>
+            <a class="dropdown-item" href="{%url 'prima_app:lista'%}">lista</a>
+            <a class="dropdown-item" href="{%url 'prima_app:welcome'%}">welcome</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Seconda App
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{%url 'seconda_app:es_for'%}">es_for</a>
+                    <a class="dropdown-item" href="{%url 'seconda_app:es_if'%}">es_if</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{%url 'seconda_app:if_else_elif'%}">if_else_elif</a>
+                  </div>
+                </li>
+
+      </ul>
     </div>
-  </body>
+  </nav>
+   
+
+    <div class="container my-4">
+      {%block content%}
+      {%endblock content%}
+      {%block script%}
+      {%endblock script%}
+    </div>
+
+ </body>
 </html>

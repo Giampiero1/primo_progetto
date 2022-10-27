@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOMEPAGE</title>
 </head>
-<body>
+{% extends "base.html"%}
+
+{%block title%} {block.super} | Chi siamo {%endblock title%}
+
+{%block content%}
     <h1>BENVENUTO NEL SITO</h1>
     
-</body>
+    {% endblock content %}
 </html>
