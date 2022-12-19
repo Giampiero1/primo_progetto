@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{%block title%} lista auto 
+{% endblock title %}
+{% block content %}
+{% for automobile in lista1%}
+<li>{{automobile}}</li>
+{%endfor%}
+{% endblock content %}

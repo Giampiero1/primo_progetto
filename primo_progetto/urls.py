@@ -24,4 +24,5 @@ urlpatterns = [
     path('prova_pratica0/', include('prova_pratica0.urls', namespace = "prova_pratica0")),
     path('', index_generale, name = "index_generale"),
     path('news/', include ('news.urls', namespace= "news")),
+    path('prova_pratica2/', include ('prova_pratica2.urls', namespace= "prova_pratica2")),
 ]
